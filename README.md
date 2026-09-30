@@ -1,7 +1,7 @@
 # X-HE
 
 Go implementation of the account hashing used on x-vare.com: **XHEE** for email
-addresses and **XHPE** for passwords. Russian version: [README.ru.md](README.ru.md).
+addresses and **X-HPE** for passwords. Russian version: [README.ru.md](README.ru.md).
 
 The idea is small. The client hashes the email and the password before sending
 them, so the server never handles either in plain text. The server then adds a
@@ -9,8 +9,8 @@ keyed step of its own before writing to the database.
 
 | protocol | package | protects | client step | server step |
 |---|---|---|---|---|
-| XHEE | [`xhee`](xhee) | email address | `sha256(lower(trim(email)) + salt)` | `HMAC-SHA256(secret, client hash)` |
-| XHPE | [`xhpe`](xhpe) | password | `PBKDF2-SHA256(password, device salt, 100000)` | `bcrypt` over the client hash and a pepper |
+| X-HEE | [`xhee`](xhee) | email address | `sha256(lower(trim(email)) + salt)` | `HMAC-SHA256(secret, client hash)` |
+| X-HPE | [`xhpe`](xhpe) | password | `PBKDF2-SHA256(password, device salt, 100000)` | `bcrypt` over the client hash and a pepper |
 
 The packages are independent; import only the one you need. The other X-HE
 modules mentioned on the site (messages, calls) are not part of this repository.
