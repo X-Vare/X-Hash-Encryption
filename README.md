@@ -29,7 +29,7 @@ code in production.
 ## Install
 
 ```
-go get github.com/x-vare/xhe
+go get github.com/X-Vare/X-Hash-Encryption
 ```
 
 Go 1.24 or newer (the client step uses `crypto/pbkdf2` from the standard library).
