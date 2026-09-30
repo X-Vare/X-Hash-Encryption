@@ -1,4 +1,4 @@
-# xhe
+# X-HE
 
 Go implementation of the account hashing used on x-vare.com: **XHEE** for email
 addresses and **XHPE** for passwords. Russian version: [README.ru.md](README.ru.md).
