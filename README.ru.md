@@ -28,7 +28,7 @@ example_test.go  оба протокола в одном сценарии рег
 ## Установка
 
 ```
-go get github.com/x-vare/xhe
+go get github.com/X-Vare/X-Hash-Encryption
 ```
 
 Нужен Go 1.24+ (клиентский шаг использует `crypto/pbkdf2` из стандартной библиотеки).
